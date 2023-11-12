@@ -1,0 +1,68 @@
+/* 3-styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.menu-open {
+    display: none;
+}
+
+.menu-open:checked + .menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    margin: 10px;
+}
+
+.menu-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.menu-open-button {
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.menu-open:checked + .menu-open-button .menu-line-1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-open:checked + .menu-open-button .menu-line-2 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.menu-open:checked + .menu-open-button .menu-line-3 {
+    transform: rotate(0) translate(-5px, 0);
+}

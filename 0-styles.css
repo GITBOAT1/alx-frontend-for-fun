@@ -1,0 +1,45 @@
+/* 0-styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative; /* Set position relative for positioning children */
+}
+
+.icon {
+    display: inline-block;
+    width: 60px;
+    height: 100px;
+    background-image: url('./0-sprite.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.icon-text {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Adjust the left position based on your text width */
+    transform: translateX(-50%); /* Center the text horizontally */
+}
+
+/* Specific styles for each icon */
+.i-html {
+    background-position: left;
+}
+
+.i-css {
+    background-position: center;
+}
+
+.i-js {
+    background-position: right;
+}

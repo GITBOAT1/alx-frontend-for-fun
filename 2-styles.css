@@ -1,0 +1,55 @@
+/* 2-styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-cb {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #ca1313;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-inner {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 50%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle-switch {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background-color: #666;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner {
+    transform: translate(100%, -50%);
+}
+
+.toggle-cb:checked + .toggle-label .toggle-switch {
+    transform: translate(70%, -50%);
+}
