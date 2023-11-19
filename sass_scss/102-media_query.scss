@@ -1,0 +1,29 @@
+/* My style */
+
+$h1-font-size: 20px;
+$h1-medium-font-size: 18px;
+$h1-small-medium-font-size: 16px;
+$h1-small-font-size: 14px;
+$h1-small-text-color: #1D1D1D;
+
+h1 {
+  font-size: $h1-font-size;
+
+  @media (max-width: 960px) {
+    font-size: $h1-medium-font-size;
+  }
+
+  @media (max-width: 640px) {
+    font-size: $h1-small-medium-font-size;
+  }
+
+  @media (max-width: 320px) {
+    font-size: $h1-small-font-size;
+  }
+}
+
+h1.small {
+  @media (max-width: 320px) {
+    color: $h1-small-text-color;
+  }
+}

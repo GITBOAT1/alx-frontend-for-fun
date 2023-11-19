@@ -1,0 +1,11 @@
+/* My style */
+$h1-font-size: 20px;
+$h1-small-font-size: 14px;
+
+h1 {
+  font-size: $h1-font-size;
+
+  @media (max-width: 320px) {
+    font-size: $h1-small-font-size;
+  }
+}

@@ -1,0 +1,10 @@
+/* My style */
+$list-names: ("name1", "name2", "name3");
+
+@import '_names';
+
+@each $name in $list-names {
+  .#{unquote($name)} {
+    background-image: url('#{$name}.jpg');
+  }
+}

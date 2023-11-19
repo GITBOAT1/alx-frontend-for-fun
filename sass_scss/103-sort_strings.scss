@@ -1,0 +1,29 @@
+/* My style */
+$list_to_sort: 5, 2, 8, 1, 3, 7, 4, 6;
+
+@function sort-list($list) {
+  $sorted-list: ();
+  
+  @for $i from 1 through length($list) {
+    $min-value: nth($list, $i);
+    $min-index: $i;
+
+    @for $j from $i through length($list) {
+      $current-value: nth($list, $j);
+
+      @if $current-value < $min-value {
+        $min-value: $current-value;
+        $min-index: $j;
+      }
+    }
+
+    $sorted-list: append($sorted-list, $min-value);
+    $list: set-nth($list, $min-index, nth($list, $i));
+    $list: set-nth($list, $i, $min-value);
+  }
+
+  @return $sorted-list;
+}
+
+$sorted-list: sort-list($list_to_sort);
+@debug $sorted-list;
