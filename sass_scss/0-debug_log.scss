@@ -1,0 +1,6 @@
+/* My style */
+$message: "Hello world";
+
+body {
+  @debug $message;
+}
